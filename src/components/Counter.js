@@ -18,6 +18,7 @@ class Counter extends React.Component{
         this.setState((prevstate)=>({
             count: prevstate.count +1
         }))
+        
      }
      incrementfive(){
          this.increment();

@@ -11,9 +11,10 @@ class Message extends React.Component{
             
         }
        
+
       msgchange(){
           this.setState({
-              message: 'Thank you for subscribing me'
+              message: 'Thank you for subscribing me '
           })
       }
      
@@ -22,7 +23,7 @@ class Message extends React.Component{
     render(){
         return (
             <div>
-        <h1>{this.state.message}</h1>
+        <h1>{this.state.message}It is {new Date().toLocaleTimeString()}.</h1>
         {/* <button onClick={()=> this.msgchange()}>Subscribe me</button>  */}
         <button onClick={this.msgchange}>Subscribe me</button> 
          

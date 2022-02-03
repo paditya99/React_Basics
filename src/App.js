@@ -19,19 +19,26 @@ import Portaldemo from './components/Portaldemo';
 import Hero from './components/Hero';
 import Errorhandle from './components/Errorhandle';
 import Hovercount from './components/Hovercount';
+import ComponentC from './components/ComponentC';
+import { UserProvider } from './components/userContext';
+import Postlist from './components/Postlist';
+import PostForm from './components/PostForm';
+import HookCounter from './components/HookCounter';
+import HookNames from './components/HookNames';
+import HookAddnumber from './components/HookAddnumber';
 
 class App extends React.Component {
 render(){  
 return (
     <div className="App">
-      {/* <Greetme name="Aditya">
+      <Greetme name="Aditya">
         <p>Children element</p>
         <button>click aditya</button>
       </Greetme>
       <Greetme name="Shubham">
         <button>Click</button>
         
-      </Greetme> */}
+      </Greetme>
       <Welcomeme name="shubham"></Welcomeme>
       <Message> </Message>
       <Counter></Counter>
@@ -54,9 +61,16 @@ return (
       <Errorhandle>
       <Hero heroname="Powerman"></Hero>
       </Errorhandle> */}
+    
       <Hovercount></Hovercount>
-      
-      
+      {/* <UserProvider  value="aditya"> */}
+      <ComponentC></ComponentC>
+      {/* </UserProvider> */}
+      <Postlist></Postlist>
+      <PostForm></PostForm>
+      <HookCounter></HookCounter>
+      <HookNames></HookNames>
+      <HookAddnumber></HookAddnumber>
     </div>
   );
 }
