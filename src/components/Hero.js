@@ -1,16 +1,11 @@
-import React from "react";
+import React from 'react'
 
-function Hero ({heroname}){
-    if(heroname==="Batman"){
-        throw new Error("Not a hero");
-    }
-
-
-    return(
-        <h1>{heroname}</h1>
-    )
+function Hero ({ heroName }) {
+  if (heroName === "Joker") {
+    throw new Error("Joker is not a hero");
+  }
+  
+  return <div>{heroName}</div>
 }
 
-
 export default Hero
-

@@ -1,5 +1,5 @@
 import React from 'react'
-
+import DataArray from './DataArray';
 class Message extends React.Component{
         constructor(props){
             super(props);
@@ -18,10 +18,13 @@ class Message extends React.Component{
           })
       }
      
-
+      
 
     render(){
+      
         return (
+           
+
             <div>
         <h1>{this.state.message}It is {new Date().toLocaleTimeString()}.</h1>
         {/* <button onClick={()=> this.msgchange()}>Subscribe me</button>  */}

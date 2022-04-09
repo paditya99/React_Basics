@@ -1,19 +1,21 @@
-import React from "react";
+import React, {useContext} from "react";
 import { UserConsumer } from "./userContext";
+import userContext from "./userContext"
+import {innerContext} from "../App"
 
-class ComponentF extends React.Component{
-    render(){
+function ComponentF (){
+
+    const outervalue=useContext(userContext)
+    const innervalue=useContext(innerContext)
+
+    
         return(
-            <UserConsumer>
-                {
-                    (name)=>{
-                        return <h1>Hello {name}</h1>
-                    }
-                    
-                }
-            </UserConsumer>
+            <div>
+                Outer- {outervalue} Inner-{innervalue}
+            </div>
         )
-    }
+        
 }
+
 
 export default ComponentF

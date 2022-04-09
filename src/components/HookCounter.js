@@ -12,7 +12,8 @@ function HookCounter() {
     }
     const decrementTwo=()=>{
         for(let i=0;i<2;i++){
-            setCount(initialcount=>initialcount-1)
+            setCount(initialcount=>initialcount+10)
+            setCount(initialcount=>initialcount+1)
         }
     }
     return(

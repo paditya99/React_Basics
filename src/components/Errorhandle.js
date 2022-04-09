@@ -17,6 +17,7 @@ class Errorhandle extends React.Component{
 
     render(){
         if(this.state.hasError){
+            
             return <h4>Something went wrong</h4>
         }
         return this.props.children

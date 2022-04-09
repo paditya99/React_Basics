@@ -1,10 +1,16 @@
 import React from "react";
 import ComponentE from "./ComponentE";
-class ComponentC extends React.Component{
-    render(){
-        return <ComponentE></ComponentE>
+
+
+function ComponentC(){
+        return(
+            <div>
+              <ComponentE></ComponentE>
+            </div>
+        ) 
+       
             
     }
-}
+
 
 export default ComponentC
