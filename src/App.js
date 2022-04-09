@@ -26,11 +26,28 @@ import PostForm from './components/PostForm';
 import HookCounter from './components/HookCounter';
 import HookNames from './components/HookNames';
 import HookAddnumber from './components/HookAddnumber';
+import Sample from './components/Sample';
+import DataArray from './components/DataArray';
+import DataArrayComponent from './components/DataArrayComponent';
+import LogmouseEffect from './components/LogmouseEffect';
+import IntervalHookCounter from './components/IntervalHookCounter';
+import HooksFetchdata from './components/HooksFetchdata';
+import HooksUseReducer from './components/HooksUseReducer';
+
+export const innerContext=React.createContext();
 
 class App extends React.Component {
 render(){  
+  const dataarray=DataArray.map(data =>{
+    return <DataArrayComponent age={DataArray.age}></DataArrayComponent>
+  })
+
+
+
 return (
+
     <div className="App">
+      {dataarray}
       <Greetme name="Aditya">
         <p>Children element</p>
         <button>click aditya</button>
@@ -45,32 +62,40 @@ return (
       <Functionclick></Functionclick>
       <Parentcomponent></Parentcomponent>
       <Usergreet></Usergreet>
-      {/* <Namelist></Namelist>
-      <Stylesheet random="true"></Stylesheet> */}
+      {/* <Namelist></Namelist> */}
+      <Stylesheet random="true"></Stylesheet>
       <Form></Form>
       <Lifecycle></Lifecycle>
       <RefDemo></RefDemo>
       <Focusinput></Focusinput>
       {/* <Portaldemo></Portaldemo> */}
       {/* <Errorhandle>
-      <Hero heroname="Spiderman"></Hero>
+      <Hero heroName="Spiderman"></Hero>
       </Errorhandle>
       <Errorhandle>
-      <Hero heroname="Batman"></Hero>
+      <Hero heroName="Batman"></Hero>
       </Errorhandle>
       <Errorhandle>
-      <Hero heroname="Powerman"></Hero>
+      <Hero heroName="Joker"></Hero>
       </Errorhandle> */}
+      
     
       <Hovercount></Hovercount>
-      {/* <UserProvider  value="aditya"> */}
+      <UserProvider value={'OuterContextValue'}>
+        <innerContext.Provider value={'InnerContextValue'}>
       <ComponentC></ComponentC>
-      {/* </UserProvider> */}
+      </innerContext.Provider>
+      </UserProvider>
       <Postlist></Postlist>
       <PostForm></PostForm>
       <HookCounter></HookCounter>
       <HookNames></HookNames>
       <HookAddnumber></HookAddnumber>
+      <Sample></Sample>
+      <LogmouseEffect></LogmouseEffect>
+      <IntervalHookCounter></IntervalHookCounter>
+      <HooksFetchdata></HooksFetchdata>
+      <HooksUseReducer></HooksUseReducer>
     </div>
   );
 }
